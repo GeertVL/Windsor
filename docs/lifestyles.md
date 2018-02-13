@@ -64,7 +64,7 @@ using (Container.BeginScope()) //extension method
 } // releases the instance
 ```
 
-In the code above the using block encloses the scope of reuse (whenever an instance is needed inside the scope the same will be used) and lifetime (end of the using block releases the instance.
+In the code above the using block encloses the scope of reuse (whenever an instance is needed inside the scope the same will be used) and lifetime (end of the using block releases the instance).
 
 :information_source: **`CallContext` scope:** For the more inquisitive of you, the scope is bound to the [CallContext](http://msdn.microsoft.com/en-us/library/system.runtime.remoting.messaging.callcontext.aspx). What that mean is that it is available on the current thread, but also flows to thread pool and `Task` threads. In multi threaded scenarios however, be careful to ensure the child operation finishes before the end of using block on the parent thread is executed.
 
